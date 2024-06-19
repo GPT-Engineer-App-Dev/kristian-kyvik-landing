@@ -1,17 +1,25 @@
-// Update this page (the content is just a fallback if you fail and example)
-// Use chakra-ui
-import { Container, Text, VStack } from "@chakra-ui/react";
-
-// Example of using react-icons
-// import { FaRocket } from "react-icons/fa";
-// <IconButton aria-label="Add" icon={<FaRocket />} size="lg" />; // IconButton would also have to be imported from chakra
+import { Container, Text, VStack, Image, Box, Heading, Link } from "@chakra-ui/react";
+import { FaLinkedin, FaDiscord } from "react-icons/fa";
 
 const Index = () => {
   return (
     <Container centerContent maxW="container.md" height="100vh" display="flex" flexDirection="column" justifyContent="center" alignItems="center">
       <VStack spacing={4}>
-        <Text fontSize="2xl">Your Blank Canvas</Text>
-        <Text>Chat with the agent to start making edits.</Text>
+        <Box boxSize="150px">
+          <Image src="/images/kristian.jpg" alt="Kristian Ruiz Kyvik" borderRadius="full" boxSize="150px" />
+        </Box>
+        <Heading as="h1" size="xl">Kristian Ruiz Kyvik</Heading>
+        <Text fontSize="lg" textAlign="center">
+          Kristian is an exceptional colleague known for his dedication, teamwork, and expertise. He consistently goes above and beyond to ensure the success of his team and projects.
+        </Text>
+        <Box>
+          <Link href="https://www.linkedin.com/in/kristianruizkyvik" isExternal>
+            <FaLinkedin size="30px" />
+          </Link>
+          <Link href="https://discord.com/users/kristiankyvik" isExternal ml={4}>
+            <FaDiscord size="30px" />
+          </Link>
+        </Box>
       </VStack>
     </Container>
   );
